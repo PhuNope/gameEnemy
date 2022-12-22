@@ -669,9 +669,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "Score: 0",
@@ -841,6 +841,37 @@
       "__uuid__": "1a44ebe6-97a2-4c81-8c32-4e1261dfb6a0",
       "__expectedType__": "cc.Prefab"
     },
+    "enemyPrefab": {
+      "__uuid__": "f6895698-cb38-48b9-909e-b08e17cf0ad1",
+      "__expectedType__": "cc.Prefab"
+    },
+    "listPositionEnemy": [
+      {
+        "__type__": "cc.Vec3",
+        "x": 330,
+        "y": 640,
+        "z": 0
+      },
+      {
+        "__type__": "cc.Vec3",
+        "x": 0,
+        "y": 640,
+        "z": 0
+      },
+      {
+        "__type__": "cc.Vec3",
+        "x": -330,
+        "y": 640,
+        "z": 0
+      }
+    ],
+    "enemyType": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "_id": "365OeZg3BOXqKng7dXtPYP"
   },
   {

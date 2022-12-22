@@ -1,18 +1,14 @@
-import { _decorator, Component, Node, SpriteFrame } from 'cc';
+import { _decorator, Component, Node, SpriteFrame } from "cc";
 const { ccclass, property } = _decorator;
 
-@ccclass('ShipType')
+@ccclass("ShipType")
 export class ShipType extends Component {
-    @property(SpriteFrame)
-    shipSprite: SpriteFrame;
+  @property(SpriteFrame)
+  shipSprite: SpriteFrame;
 
-    start() {
+  @property(Number)
+  shipHealth: Number;
 
-    }
-
-    update(deltaTime: number) {
-
-    }
+  @property(Number)
+  shipSpeed: Number;
 }
-
-
