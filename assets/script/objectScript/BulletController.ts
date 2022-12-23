@@ -6,6 +6,7 @@ export class BulletController extends Component {
     bulletDirection;
     isFire: Boolean = false;
     bulletSpeed: number = 150;
+    bulletDamage: number = 1;
 
     @property(Sprite)
     bulletSprite: Sprite;
@@ -19,16 +20,21 @@ export class BulletController extends Component {
             this.node.translate(this.bulletDirection);
         }
 
-        if (this.node.position.subtract(Vec3.ZERO).length() > 1000) {
+        if (this.node.position.subtract(Vec3.ZERO).length() > 1500) {
             this.node.destroy();
             this.isFire = false;
         }
     }
 
-    setup(direction: Vec3, speed: number) {
+    setup(direction: Vec3, speed: number, damage: number) {
         this.bulletSpeed = speed;
         this.bulletDirection = direction.normalize().multiply(new Vec3(speed, speed, 0));
         this.isFire = true;
+        this.bulletDamage = damage;
+    }
+
+    getBulletDamage() {
+        return this.bulletDamage;
     }
 }
 

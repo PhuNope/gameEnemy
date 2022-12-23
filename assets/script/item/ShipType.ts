@@ -2,13 +2,13 @@ import { _decorator, Component, Node, SpriteFrame } from "cc";
 const { ccclass, property } = _decorator;
 
 @ccclass("ShipType")
-export class ShipType extends Component {
+export class ShipType {
   @property(SpriteFrame)
   shipSprite: SpriteFrame;
 
-  @property(Number)
-  shipHealth: Number;
+  @property({ type: Number })
+  shipHealth: number;
 
-  @property(Number)
-  shipSpeed: Number;
+  @property({ type: Number })
+  shipSpeed: number;
 }
