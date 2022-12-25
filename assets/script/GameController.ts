@@ -139,8 +139,8 @@ export class GameController extends Component {
 
         //khoi tao enemy
         enemy.getComponent(EnemyController).setup(this.enemyType[typeEnemy], this.listPositionEnemy[randomPosition], (ship: EnemyController) => {
-            let index = this.arrListShip.findIndex(item => item === ship.node)
-            this.arrListShip.splice(index, 1)
+            let index = this.arrListShip.findIndex(item => item === ship.node);
+            this.arrListShip.splice(index, 1);
             ship.node.destroy();
             this.enemyDie();
         }, () => {
@@ -188,6 +188,7 @@ export class GameController extends Component {
         });
         this.gamePlay.addChild(gameOverUI);
 
-
+        this.labelScore.string = "";
+        this.gamePlay.off(Node.EventType.TOUCH_START, this.handleRotateCanon, this);
     }
 }
